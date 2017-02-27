@@ -56,10 +56,18 @@ end
   )
 end
 
-user = User.first
-user.update_attributes!(
-  email: "jd.dupuis@free.fr",
-  password: "disquette26"
+admin = User.create!(
+  name:     'Admin User1',
+  email:    'admin@bloccit.com',
+  password: 'helloworld',
+  role:     'admin'
+)
+
+# Create a member
+member = User.create!(
+  name:     'Member User1',
+  email:    'member@bloccit.com',
+  password: 'helloworld'
 )
 
 puts "Seed finished"
