@@ -1,26 +1,327 @@
-.user-info {
-  margin-top: 9px;
+body {
+  width: 100%;
+  height: 600px;
+  background-image: url('./galaxy.jpg');
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  padding-top: 50px;
 }
 
-.nav {
-  margin-top: 5px;
+#nav ul {
+  background-color: #02112e;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  list-style-type: none;
+  height: 50px;
+}
+
+#left-menu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#nav li a {
+  color: white;
+  text-decoration: none;
+}
+
+
+#left-menu li:hover {
+  background-color: #143270;
+  border-radius: 1px;
+}
+
+#nav-left {
+  display: flex;
+  flex-direction: row;
+}
+
+#nav-left li {
+  padding: 10px;
+}
+
+.nav-right {
+  margin-right: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.nav-right li:first-child {
+  color: white;
+}
+
+.nav-right li:nth-child(2) {
+  padding: 10px;
+  color: white;
+}
+
+.nav-right li {
+  padding: 10px;
+}
+
+.nav-right li:last-child:hover {
+  background-color: #143270;
+  border-radius: 1px;
+}
+
+#desc-index-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+}
+
+#desc-index-container h1 {
+  font-size: 5em;
+  color: #db6a6c;
+  letter-spacing: 10px;
+}
+
+#description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 250px;
+  line-height: 40px;
+}
+
+#description p {
+  color: white;
+}
+
+#description p:first-child {
+  font-size: 1.5em;
+  width: 550px;
+  text-align: center;
+}
+
+.btn-sign {
+  background-color: #db6a6c;
+  color: white;
+}
+
+#descriptionn p a:hover {
+  color: white;
+}
+
+.btn-sign:hover {
+  border: 1px solid white;
+}
+
+#signin:hover {
+  background-color: #143270;
+  border-radius: 1px;
+}
+
+footer {
+  width: 100%;
+  height: 150px;
+  background-color: #02112e;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  bottom: 0;
+}
+
+#footer-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  padding-top: 50px;
+}
+
+.subcat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.subcat ul li {
+  list-style-type: none;
+  color: white;
+}
+
+.subcat li img {
+  width: 35px;
+  height: 35px;
+  margin: 10px;
+}
+
+#body {
+  background-color: white;
+}
+
+#index-topics-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: white;
+}
+
+#index-topics-container h1 {
+  color: #143270;
+  font-size: 4em;
+  text-transform: uppercase;
+}
+
+#topics-container {
+  margin: 50px;
+}
+
+#topics-container a {
+  color: #db6a6c;
+}
+
+#topics-container small {
+  color: #143270;
+  text-align: justify;
+}
+
+#donate {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#show-topics-container {
+  background-color: white;
+  padding: 50px;
+}
+
+#show-topics-container h1 h4 {
+  color: #143270;
+}
+
+#show-topics-container h4 a {
+  color: #143270;
+}
+
+#show-topics-container h3 {
+  color: #db6a6c;
+}
+
+#show-post-container {
+  background-color: white;
+  padding: 50px;
+}
+
+#show-post-container h1 h4 {
+  color: #143270;
+}
+
+#show-post-container h4 a {
+  color: #143270;
+}
+
+#show-post-container h4 {
+  color: #db6a6c;
+}
+
+#sign-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 60px;
+  background-color: white;
+}
+
+#sign-container h2 {
+  font-size: 3em;
+  margin-bottom: 30px;
+  color: #143270;
+}
+
+#sign-container input {
+  width: 300px;
+  border: 1px solid #143270;
+}
+
+#sign-container input:focus {
+  outline: none;
+}
+
+#sign-container input[type=submit] {
+  background-color: #02112e;
+  padding: 10px;
+  font-size: 1.1em;
+  text-transform: uppercase;
+}
+
+#sign-container input[type=submit]:hover {
+  border: 1px solid #db6a6c;
+  background-color: #db6a6c;
+  color: #02112e;
+}
+
+.signin-focus input:focus {
+  background-color: #143270;
+  color: white;
+}
+
+#separate {
+  width: 100%;
+  height: 1px;
+  background-color: #bdc3c7;
+  margin-top: 20px;
+}
+
+#likenshare {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 10px;
+}
+
+#likenshare img {
+  width: 20px;
+  height: 20px;
+}
+
+#like {
+  display: flex;
+  flex-direction: row;
+}
+
+#like p {
+  color: #143270;
+  margin-left: 5px;
+}
+
+#share {
+  display: flex;
+  flex-direction: row;
+  color: #143270;
+  margin-left: 20px;
+}
+
+#share p {
+  color: #143270;
+  margin-left: 5px;
+}
+
+#comment-container {
+  margin-top: 30px;
+}
+
+#comment-container input {
+  border-radius: 2px;
 }
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
- @import "bootstrap-sprockets";
- @import "bootstrap";
+@import "bootstrap-sprockets";
+@import "bootstrap";
