@@ -8,8 +8,21 @@ require 'random_data'
     password: RandomData.random_sentence
   )
 end
-
 users = User.all
+
+admin = User.create!(
+  name:     'Admin User1',
+  email:    'admin@sayit.com',
+  password: 'helloworld',
+  role:     'admin'
+)
+
+# Create a member
+member = User.create!(
+  name:     'Member User1',
+  email:    'member@sayit.com',
+  password: 'helloworld'
+)
 
 # Create topics
 15.times do
@@ -56,20 +69,6 @@ end
     body: "I am the unique comment of the unique test post"
   )
 end
-
-admin = User.create!(
-  name:     'Admin User1',
-  email:    'admin@bloccit.com',
-  password: 'helloworld',
-  role:     'admin'
-)
-
-# Create a member
-member = User.create!(
-  name:     'Member User1',
-  email:    'member@bloccit.com',
-  password: 'helloworld'
-)
 
 puts "Seed finished"
 puts "#{User.count} users created"

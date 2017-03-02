@@ -108,7 +108,7 @@ body {
   color: white;
 }
 
-#descriptionn p a:hover {
+#description p a:hover {
   color: white;
 }
 
@@ -319,6 +319,42 @@ footer {
 
 #comment-container input {
   border-radius: 2px;
+}
+
+.label-trend {
+  background-color: #673AB7;
+}
+
+.label-new {
+  background-color: #03A9F4;
+}
+
+.label-container {
+  background-color: #F44336;
+  color: white;
+}
+
+.label-container:hover {
+  background-color: #F44336;
+  color: white;
+  text-decoration: underline;
+}
+
+.btn-new-topic {
+  background-color: #02112e;
+  margin-bottom: 60px;
+}
+
+.new-topic-inputs {
+  padding: 50px;
+}
+
+.new-topic-inputs input {
+  width: 400px;
+}
+
+.new-topic-inputs input textarea {
+  width: 600px;
 }
 
 
