@@ -357,7 +357,27 @@ footer {
   width: 600px;
 }
 
+.vote-arrows {
+   width: 40px;
+   text-align: center;
+ }
 
+#new-post-container {
+ background-color: white;
+ padding: 50px;
+}
+
+#submit-new-post input[type=submit] {
+  color: white;
+}
+
+#new-post-container h1 {
+  color: #02112e;
+}
+
+.btn-new-post {
+  background-color: #02112e;
+}
 
 
 @import "bootstrap-sprockets";
