@@ -46,6 +46,9 @@ group :development, :test do
   gem 'pry-rails'
 end
 
+# Sensitive date hidden
+gem 'figaro', '1.0'
+
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
