@@ -23,8 +23,9 @@
       <div id="separate"></div>
       <div id="likenshare">
         <div id="like">
-          <%= image_tag('like.png') %>
-          <p>Like</p>
+          <% if current_user %>
+              <%= render partial: 'favorites/favorite', locals: { post: @post } %>
+          <% end %>
         </div>
         <div id="share">
           <%= image_tag('share.png') %>
@@ -56,8 +57,5 @@
        </div>
      </h3>
    </div>-->
-   <% if current_user %>
-       <%= render partial: 'favorites/favorite', locals: { post: @post } %>
-   <% end %>
   </div>
 </div>

@@ -297,8 +297,12 @@ footer {
 }
 
 #like p {
-  color: #143270;
+  color: #FFC107;
   margin-left: 5px;
+}
+
+#like:hover {
+  text-decoration:none;
 }
 
 #share {
@@ -377,6 +381,24 @@ footer {
 
 .btn-new-post {
   background-color: #02112e;
+}
+
+.glyphicon-star {
+  color: #FFC107;
+}
+
+.glyphicon-star-empty {
+  color: #F44336;
+}
+
+.gravatar {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+
+#show-profile-container {
+  background-color: white;
 }
 
 
