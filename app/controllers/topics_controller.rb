@@ -4,11 +4,16 @@ class TopicsController < ApplicationController
   before_action :authorize_user, except: [:index, :show]
 
   def index
-      @topics = Topic.all
+      @topics = Topic.visible_to(current_user)
   end
 
   def show
     @topic = Topic.find(params[:id])
+
+    unless @topic.public || current_user
+      flash[:alert] = "You must be signed in to view private topics"
+      redirect_to new_session_path
+    end
   end
 
   def new
@@ -65,7 +70,7 @@ class TopicsController < ApplicationController
    end
 
    def authorize_user
-     unless current_user.admin? 
+     unless current_user.member?
        flash[:alert] = "You must be an admin to do that"
        redirect_to topics_path
      end
