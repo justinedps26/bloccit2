@@ -8,6 +8,9 @@ gem 'rails', '4.2.6'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 
+# Handling Markdown
+gem 'redcarpet'
+
 # Bootstrap for styling
 gem 'bootstrap-sass'
 # Use Uglifier as compressor for JavaScript assets
