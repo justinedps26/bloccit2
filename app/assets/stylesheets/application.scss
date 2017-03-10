@@ -1,22 +1,30 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Rock+Salt');
+
+
 body {
   width: 100%;
-  height: 600px;
-  background-image: url('../galaxy.jpg');
-  background-color: #143270;
+  height: 580px;
+  background-color: #ecf0f1;
   background-position: center;
   background-size: 100%;
   background-repeat: no-repeat;
-  padding-top: 50px;
+  padding-top: 40px;
+  margin:0;
 }
 
 #nav ul {
-  background-color: #02112e;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
   list-style-type: none;
   height: 50px;
+  font-family: Open Sans;
+}
+
+.logo-font {
+  font-family: 'Rock Salt';
+  font-size: 0.8em;
 }
 
 #left-menu {
@@ -32,8 +40,7 @@ body {
 
 
 #left-menu li:hover {
-  background-color: #143270;
-  border-radius: 1px;
+  border-bottom: 2px solid #FF9800;
 }
 
 #nav-left {
@@ -70,18 +77,27 @@ body {
   border-radius: 1px;
 }
 
+#index-container {
+  width: 100%;
+  height: 600px;
+  background-image: url(../bg.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 #desc-index-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 50px;
+  padding: 40px;
 }
 
 #desc-index-container h1 {
   font-size: 5em;
-  color: #db6a6c;
-  letter-spacing: 10px;
+  color: #FF9800;
+  font-family: Rock Salt;
 }
 
 #description {
@@ -89,12 +105,15 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 250px;
-  line-height: 40px;
+  margin-top: 100px;
+  margin-bottom: 50px;
 }
 
 #description p {
   color: white;
+  text-shadow: 1px 1px #145666;
+  font-family: Open Sans;
+  margin-top: 80px;
 }
 
 #description p:first-child {
@@ -103,17 +122,21 @@ body {
   text-align: center;
 }
 
+#sign-button {
+  margin-top: 30px;
+}
+
 .btn-sign {
-  background-color: #db6a6c;
-  color: white;
+  background-color: white;
+  color: #FF9800;
 }
 
 #description p a:hover {
-  color: white;
+  color: #FF9800;
 }
 
 .btn-sign:hover {
-  border: 1px solid white;
+  border-bottom: 1px solid #FF9800;
 }
 
 #signin:hover {
@@ -123,8 +146,7 @@ body {
 
 footer {
   width: 100%;
-  height: 150px;
-  background-color: #02112e;
+  height: 45px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -136,8 +158,7 @@ footer {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-around;
-  padding-top: 50px;
+  justify-content: space-between;
 }
 
 .subcat {
@@ -149,12 +170,12 @@ footer {
 
 .subcat ul li {
   list-style-type: none;
-  color: white;
+  color: rgb(255, 152, 0);
 }
 
 .subcat li img {
-  width: 35px;
-  height: 35px;
+  width: 25px;
+  height: 25px;
   margin: 10px;
 }
 
@@ -171,9 +192,30 @@ footer {
 }
 
 #index-topics-container h1 {
-  color: #143270;
+  color: #FF9800;
   font-size: 4em;
   text-transform: uppercase;
+  margin-left: 20px;
+}
+
+#h1-topic {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+#tops {
+  width: 400px;
+  height: 5px;
+  background-color: #FF9800;
+  margin-top: 200px;
+}
+
+#h1-topic img {
+  width: 60px;
+  height: 60px;
 }
 
 #topics-container {

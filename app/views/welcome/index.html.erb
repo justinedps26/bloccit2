@@ -1,14 +1,16 @@
-<div id="index-container">
+<body id="index-container">
+  <%= render partial: 'layouts/navbarindex' %>
   <div id="desc-index-container">
     <div id="title">
      <h1>SayIt</h1>
     </div>
     <div id="description">
        <p>SayIt allows you to share topics, posts, comments and links with your friends!</p>
-       <p>
-         <%= link_to "Sign In", new_session_path, class: 'btn btn-sign' %> or
+       <div id="sign-button">
+         <%= link_to "Sign In", new_session_path, class: 'btn btn-sign' %>
+         <span style="color:white">or</span>
          <%= link_to "Sign Up", new_user_path, class: 'btn btn-sign' %>
-       </p>
+       </div>
      </div>
   </div>
-</div>
+</body>

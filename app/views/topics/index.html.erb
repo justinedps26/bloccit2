@@ -1,5 +1,10 @@
-<div id="index-topics-container">
-  <h1>Topics</h1>
+<%= render partial: 'layouts/navbar' %>
+
+<body id="index-topics-container">
+  <div id="h1-topic">
+    <%= image_tag('chat.png') %>
+    <h1>Topics</h1>
+  </div>
     <div id="topics-container">
       <% if user_is_authorized_for_topics? %>
         <div class="col-md-4 col-topic">
@@ -7,7 +12,7 @@
         </div>
       <% end %>
       <div class="row">
-       <div class="col-md-8" style="margin-top:50px;">
+       <div class="row" style="margin-top:50px;">
          <% @topics.each do |topic| %>
            <div class="media">
              <div class="media-body">
@@ -23,4 +28,4 @@
        </div>
     </div>
   </div>
-</div>
+</body>
