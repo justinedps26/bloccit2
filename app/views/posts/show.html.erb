@@ -34,7 +34,7 @@
           <p>Share</p>
         </div>
       </div>
-      <h4><%= @post.comments.count %> Comments</h4>
+      <h4><div class='js-comments-count'><%= pluralize(@post.comments.count, 'Comment') %></div></h4>
       <div class="new-comment">
         <% if current_user %>
            <%= render 'comments/form', comment: Comment.new, post: @post %>
