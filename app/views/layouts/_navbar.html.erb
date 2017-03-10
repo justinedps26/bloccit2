@@ -21,11 +21,13 @@
           <li>
             <%= link_to current_user.name, user_path(current_user) %>
           </li>
-          <li style="color:white;font-weight:bold"> | </li>
-          <li id="add-topic">
-            <%= image_tag('plus.png') %>
-            <%= link_to 'New Topic', new_topic_path %>
-          </li>
+          <% if user_is_authorized_for_topics? %>
+            <li style="color:white;font-weight:bold"> | </li>
+            <li id="add-topic">
+              <%= image_tag('plus.png') %>
+              <%= link_to 'New Topic', new_topic_path %>
+            </li>
+          <% end %>
           <li style="color:white;font-weight:bold"> | </li>
           <li><%= link_to 'Sign Out', session_path(current_user), method: :delete %></li>
         <% else %>

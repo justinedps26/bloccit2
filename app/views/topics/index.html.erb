@@ -5,24 +5,24 @@
     <%= image_tag('chat.png') %>
     <h1>Topics</h1>
   </div>
-    <div id="topics-container">
-      <% if user_is_authorized_for_topics? %>
-        <div class="col-md-4 col-topic">
-          <%= link_to "New Topic", new_topic_path, class: 'btn btn-new-topic' %>
-        </div>
-      <% end %>
-      <div class="row">
-       <div class="row" style="margin-top:50px;">
-         <% @topics.each do |topic| %>
-           <div id="topic-container" class="media">
-             <div class="media-body">
-               <h4 class="media-heading">
-                 <span style="margin-left:15px;" class="label label-new">New</span> <span style="margin-left:5px;" class="label label-trend">Trending</span> <%= link_to topic.name, topic %>
-               </h4>
-             </div>
+  <div id="topics-container">
+    <% if user_is_authorized_for_topics? %>
+      <div class="col-md-4 col-topic">
+        <%= link_to "New Topic", new_topic_path, class: 'btn btn-new-topic' %>
+      </div>
+    <% end %>
+    <div class="row">
+     <div class="row" style="margin-top:50px;">
+       <% @topics.each do |topic| %>
+         <div id="topic-container" class="media">
+           <div class="media-body">
+             <h4 class="media-heading">
+               <span style="margin-left:15px;" class="label label-new">New</span> <span style="margin-left:5px;" class="label label-trend">Trending</span> <%= link_to topic.name, topic %>
+             </h4>
            </div>
-         <% end %>
-       </div>
+         </div>
+       <% end %>
+     </div>
     </div>
   </div>
 </body>

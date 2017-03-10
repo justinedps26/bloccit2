@@ -189,6 +189,7 @@ footer {
   align-items: center;
   justify-content: flex-start;
   background-color: white;
+  margin:0;
 }
 
 #index-topics-container h1 {
@@ -238,6 +239,27 @@ footer {
   text-align: justify;
 }
 
+#topic-title {
+  width: 100%;
+  height: auto;
+  background-color: #ecf0f1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#topic-title h1 {
+  color: #FF9800;
+  text-shadow: 2px 2px white;
+  text-transform: uppercase;
+}
+
+#topic-title p {
+  color: #FF9800;
+  text-align: center;
+}
+
 #add-topic {
   display: flex;
   flex-direction: row;
@@ -256,9 +278,51 @@ footer {
   align-items: center;
 }
 
+#show-topic-media {
+  background-color: white;
+  border: 1px solid #ecf0f1;
+  box-shadow: 1px 1px 1px #bdc3c7;
+  width: 800px;
+  height: auto;
+  padding: 20px;
+}
+
+#show-topic-media small {
+  color: #2c3e50;
+}
+
+#media-heading-show-posts {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#media-heading-show-posts p:first-child {
+  font-size: 1.2em;
+}
+
+#media-heading-show-posts p:first-child a {
+  color: #00BCD4;
+}
+
+#media-heading-show-posts p:last-child {
+  margin-left: 20px;
+}
+
+#media-heading-show-posts p:last-child a {
+  color: white;
+}
+
 #show-topics-container {
   background-color: white;
-  padding: 50px;
+  padding: 40px;
+}
+
+#show-posts-topic-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 #show-topics-container h1 h4 {
@@ -270,7 +334,7 @@ footer {
 }
 
 #show-topics-container h3 {
-  color: #db6a6c;
+  color: #FF9800;
 }
 
 #show-post-container {
@@ -423,9 +487,19 @@ footer {
 }
 
 .vote-arrows {
-   width: 40px;
-   text-align: center;
- }
+  width: 40px;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.vote-arrows img {
+  width: 20px;
+  height: 20px;
+  margin: 5px;
+}
 
 #new-post-container {
  background-color: white;
@@ -472,6 +546,14 @@ footer {
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
+}
+
+.glyphicon-chevron-up {
+  color: #00BCD4;
+}
+
+.glyphicon-chevron-down {
+  color: #F44336;
 }
 
 
