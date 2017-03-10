@@ -11,13 +11,9 @@
   <% end %>
   <div id="form-style">
     <%= form_group_tag(post.errors[:title]) do %>
-      <%= f.text_field :title, class: 'form-control', placeholder: "Title..." %>
+      <div class="form-group" id="submit-new-post">
+        <%= f.submit "Publish", class: 'btn btn-new-post' %>
+      </div>
     <% end %>
-    <%= form_group_tag(post.errors[:body]) do %>
-      <%= f.text_area :body, class: 'form-control', placeholder: "Share your ideas..." %>
-    <% end %>
-    <div class="form-group">
-      <%= render partial: 'labels/form', locals: { f: f, labels: @post.labels } %>
-    </div>
   </div>
 <% end %>
