@@ -1,3 +1,5 @@
+<%= render partial: 'layouts/navbar' %>
+
 <div id="show-profile-container">
   <div class="row">
    <div class="col-md-8">
@@ -13,7 +15,7 @@
          <h2 class="media-heading"><%= @user.name %></h2>
          <small>
            <%= pluralize(@user.posts.count, 'post') %>,
-           <%= pluralize(@user.comments.count, 'comment') %>
+           <div class='js-comments-count'><%= pluralize(@user.comments.count, 'comment') %></div>
          </small>
        </div>
      </div>
@@ -25,13 +27,6 @@
     <p>Nothing to show</p>
   <% else %>
     <%= render @user.posts %>
-  <% end %>
-
-  <h2>Comments</h2>
-  <% if @user.comments.count == 0 %>
-    <p>Nothing to show</p>
-  <% else %>
-    <%= render @user.comments %>
   <% end %>
 
 </div>

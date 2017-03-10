@@ -9,4 +9,5 @@
     <!-- implement method auth for comment asap! -->
     <p><%= comment.body %></p>
   </div>
+  <%= link_to 'Delete', [comment.post, comment], method: :delete, remote: true %>
 <% end %>
