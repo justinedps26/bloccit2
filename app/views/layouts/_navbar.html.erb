@@ -1,4 +1,4 @@
-<div id="nav" class="navbar-fixed-top" style="background-color:#FF9800">
+<div id="nav" class="navbar-fixed-top" style="background-color:#00BCD4">
   <ul>
     <div id="nav-left">
       <div id="left-title">
@@ -21,7 +21,12 @@
           <li>
             <%= link_to current_user.name, user_path(current_user) %>
           </li>
-          <li> | </li>
+          <li style="color:white;font-weight:bold"> | </li>
+          <li id="add-topic">
+            <%= image_tag('plus.png') %>
+            <%= link_to 'New Topic', new_topic_path %>
+          </li>
+          <li style="color:white;font-weight:bold"> | </li>
           <li><%= link_to 'Sign Out', session_path(current_user), method: :delete %></li>
         <% else %>
           <li id="signin"><%= link_to 'Sign In', new_session_path %></li>
@@ -30,15 +35,4 @@
     </div>
   </ul>
 
-  <% if flash[:notice] %>
-    <div class="alert alert-success">
-      <button type="button" class="close" data-dismiss="alert">&times;</button>
-      <%= flash[:notice] %>
-    </div>
-  <% elsif flash[:alert] %>
-    <div class="alert alert-warning">
-      <button type="button" class="close" data-dismiss="alert">&times;</button>
-      <%= flash[:alert] %>
-    </div>
-  <% end %>
 </div>

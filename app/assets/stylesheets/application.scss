@@ -69,7 +69,7 @@ body {
 }
 
 .nav-right li {
-  padding: 10px;
+  padding: 5px;
 }
 
 .nav-right li:last-child:hover {
@@ -223,12 +223,31 @@ footer {
 }
 
 #topics-container a {
-  color: #db6a6c;
+  color: #FF9800;
+  margin-left: 20px;
+  font-size: 1.2em;
+}
+
+#topic-container {
+  background-color: #ecf0f1;
+  padding: 35px;
 }
 
 #topics-container small {
   color: #143270;
   text-align: justify;
+}
+
+#add-topic {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#add-topic img {
+  width: 20px;
+  height: 20px;
+  margin: 5px;
 }
 
 #donate {
@@ -442,6 +461,19 @@ footer {
 #show-profile-container {
   background-color: white;
 }
+
+.alert-done {
+  background-color: #bdc3c7;
+  color: white;
+  font-weight: bold;
+  width: 500px;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
 
 
 @import "bootstrap-sprockets";

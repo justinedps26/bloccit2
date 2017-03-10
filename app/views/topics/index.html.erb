@@ -14,10 +14,10 @@
       <div class="row">
        <div class="row" style="margin-top:50px;">
          <% @topics.each do |topic| %>
-           <div class="media">
+           <div id="topic-container" class="media">
              <div class="media-body">
                <h4 class="media-heading">
-                 <%= link_to topic.name, topic %><span style="margin-left:15px;" class="label label-new">New</span> <span style="margin-left:15px;" class="label label-trend">Trending</span>
+                 <span style="margin-left:15px;" class="label label-new">New</span> <span style="margin-left:5px;" class="label label-trend">Trending</span> <%= link_to topic.name, topic %>
                </h4>
              </div>
            </div>
