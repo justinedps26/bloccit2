@@ -1,13 +1,25 @@
-<%= content_tag :div, class: 'media', id: "comment-#{comment.id}" do %>
+<%= content_tag :div, class: 'media comment-design', id: "comment-#{comment.id}" do %>
   <div class="media-body">
-    <small style="font-size:1.1em;font-weight:bold">
-      <%= comment.user.name %>
-    </small>
-    <small style="font-size:0.7em;">
-      <%= time_ago_in_words(comment.created_at) %> ago
-    </small>
+    <div id="post-user-comment-container">
+      <div id="cont-1">
+        <% avatar_url = @post.user.avatar_url(128) %>
+        <% if avatar_url %>
+          <div class="media-left">
+            <%= image_tag avatar_url, class: 'media-object' %>
+          </div>
+        <% end %>
+        <div id="comment-user-name">
+          <p><%= comment.user.name %></p>
+          <small><%= time_ago_in_words(comment.created_at) %> ago</small>
+        </div>
+      </div>
+      <div id="cont-2">
+        <%= link_to image_tag('cross.png'), [comment.post, comment], method: :delete, remote: true, alt: 'Delete', title:'delete' %>
+      </div>
+    </div>
     <!-- implement method auth for comment asap! -->
-    <p><%= comment.body %></p>
+    <div id="comment-body-container">
+      <p><%= comment.body %></p>
+    </div>
   </div>
-  <%= link_to 'Delete', [comment.post, comment], method: :delete, remote: true %>
 <% end %>

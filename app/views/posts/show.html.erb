@@ -1,14 +1,27 @@
 <%= render partial: 'layouts/navbar' %>
 
 <div id="show-post-container">
-  <div>
-     <%= render partial: 'votes/voter', locals: { post: @post } %>
+  <div id="show-post-title-container">
+
+    <div id="post-user-show">
+      <div>
+        <% avatar_url = @post.user.avatar_url(48) %>
+        <% if avatar_url %>
+          <div class="media-left">
+            <%= image_tag avatar_url, class: 'media-object' %>
+          </div>
+        <% end %>
+      </div>
+      <div id="post-user-order">
+        <p><%= @post.user.name %></p>
+        <p><%= time_ago_in_words(@post.created_at) %> ago</p>
+      </div>
+    </div>
+
      <h1>
        <%= @post.title %> <br>
-       <small>
-         submitted <%= time_ago_in_words(@post.created_at) %> ago by <%= @post.user.name %>
-       </small>
      </h1>
+
   </div>
 
   <div class="row">
@@ -21,20 +34,22 @@
 
   <div class="row">
     <div class="col-md-8">
-      <p><%= @post.body %></p>
+      <div id="post-body-container">
+        <p><%= @post.body.html_safe %></p>
+      </div>
       <div id="separate"></div>
       <div id="likenshare">
-        <div id="like">
-          <% if current_user %>
-              <%= render partial: 'favorites/favorite', locals: { post: @post } %>
-          <% end %>
+        <%= render partial: 'votes/voter', locals: { post: @post } %>
+        <div id="comments-icon-container">
+          <div id="icon">
+            <%= image_tag('bubble.png') %>
+          </div>
+          <div class='js-comments-count' id="js-comments-count">
+            <span style="font-weight:bold;font-size:1.1em;"><%= @post.comments.count %></span>
+          </div>
         </div>
-        <div id="share">
-          <%= image_tag('share.png') %>
-          <p>Share</p>
-        </div>
+
       </div>
-      <h4><div class='js-comments-count'><%= pluralize(@post.comments.count, 'Comment') %></div></h4>
       <div class="new-comment">
         <% if current_user %>
            <%= render 'comments/form', comment: Comment.new, post: @post %>

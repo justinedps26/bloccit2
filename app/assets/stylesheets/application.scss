@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans|Rock+Salt');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Rock+Salt|Playfair+Display');
 
 
 body {
@@ -159,6 +159,7 @@ footer {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  font-family: Open Sans;
 }
 
 .subcat {
@@ -190,6 +191,7 @@ footer {
   justify-content: flex-start;
   background-color: white;
   margin:0;
+  font-family: Open Sans;
 }
 
 #index-topics-container h1 {
@@ -247,6 +249,7 @@ footer {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  font-family: Open Sans;
 }
 
 #topic-title h1 {
@@ -285,6 +288,7 @@ footer {
   width: 800px;
   height: auto;
   padding: 20px;
+  font-family: Open Sans;
 }
 
 #show-topic-media small {
@@ -295,6 +299,7 @@ footer {
   display: flex;
   flex-direction: row;
   align-items: center;
+  font-family: Open Sans;
 }
 
 #media-heading-show-posts p:first-child {
@@ -316,6 +321,7 @@ footer {
 #show-topics-container {
   background-color: white;
   padding: 40px;
+  font-family: Open Sans;
 }
 
 #show-posts-topic-container {
@@ -323,6 +329,7 @@ footer {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
+  font-family: Open Sans;
 }
 
 #show-topics-container h1 h4 {
@@ -443,7 +450,61 @@ footer {
 }
 
 #comment-container {
-  margin-top: 30px;
+  margin-top: 70px;
+}
+
+#post-user-comment-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#post-user-comment-container img {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+
+#comment-user-name {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  line-height: 10px;
+}
+
+#comment-user-name p {
+  font-weight: bold;
+  font-size: 1.1em;
+  color: #FF9800;
+}
+
+#comment-body-container {
+  padding: 20px;
+  font-family: Playfair Display;
+  font-size: 1.1em;
+}
+
+#comment-user-name small {
+  font-style: italic;
+}
+
+#cont-1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+#cont-2 img {
+  width: 15px;
+  height: 15px;
+  margin-bottom: 40px;
+}
+
+.comment-design {
+  border: 1px solid #ecf0f1;
+  padding: 10px;
 }
 
 #comment-container input {
@@ -534,6 +595,7 @@ footer {
 
 #show-profile-container {
   background-color: white;
+  font-family: Open Sans;
 }
 
 .alert-done {
@@ -548,12 +610,85 @@ footer {
   justify-content: space-around;
 }
 
-.glyphicon-chevron-up {
-  color: #00BCD4;
+#post-body-container {
+  padding: 10px;
+  border: 1px solid #ecf0f1;
+  height: 300px auto;
+  font-family: Playfair Display;
+  font-size: 1.5em;
 }
 
-.glyphicon-chevron-down {
+#post-user-show {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  color: #2c3e50;
+}
+
+#post-user-show img {
+  border-radius: 50%;
+}
+
+#post-user-order {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  line-height: 10px;
+}
+
+#post-user-order p:first-child {
+  font-weight: bolder;
+}
+
+#post-user-order p:last-child {
+  font-style: italic;
+}
+
+#show-post-title-container {
+  font-family: Open Sans;
+}
+
+#show-post-title-container h1 {
+  color: #00BCD4;
+  font-weight: bold;
+  text-transform: capitalize;
+  margin-top: 50px;
+}
+
+#show-post-title-container small {
+  font-size: 1em;
+  color: #2c3e50;
+}
+
+#show-post-title-container small span {
+  font-weight: bolder;
   color: #F44336;
+}
+
+#comment-input input {
+  border: 1px solid #ecf0f1;
+  padding: 35px;
+  color: #2c3e50;
+  font-size: 1.2em;
+  font-family: Open Sans;
+  font-style: italic;
+}
+
+#comments-icon-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#comments-icon-container img {
+  width: 20px;
+  height: 20px;
+  margin: 5px;
+}
+
+#js-comments-count {
+  margin-right: 10px;
 }
 
 
