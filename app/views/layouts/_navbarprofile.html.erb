@@ -32,15 +32,30 @@
         <% end %>
     </div>
   </ul>
+</div>
 
-  <div id="cat-menu">
-    <ul class="topics">
-      <li><%= link_to 'UX/UI Design', topics_path %></li>
-      <li><%= link_to 'Software Engineering', topics_path %></li>
-      <li><%= link_to 'Coding Challenges', topics_path %></li>
-      <li><%= link_to 'Development tools', topics_path %></li>
-      <li><%= link_to 'RUBY Room', topics_path %></li>
-      <li><%= link_to 'Artificial Intelligence & Machine Learning', topics_path %></li>
-    </ul>
+<div id="navbar-profile">
+  <div class="row" id="profile-position">
+     <div class="media">
+       <br />
+       <% avatar_url = @user.avatar_url(128) %>
+       <% if avatar_url %>
+         <div class="media-left">
+           <%= image_tag avatar_url, class: 'media-object' %>
+         </div>
+       <% end %>
+       <div class="media-body" id="profile-info">
+         <h2 class="media-heading" id="profile-info-user"><%= @user.name %></h2>
+         <div id="followers">
+           <p><span style="font-weight:bold">287</span> Followers</p>
+           <p><span style="font-weight:bold">260</span> Following</p>
+         </div>
+         <div id="social">
+           <%= link_to image_tag('fb.png') %>
+           <%= link_to image_tag('twitter.png') %>
+           <%= link_to image_tag('linkedin-logo.png') %>
+         </div>
+       </div>
+     </div>
   </div>
 </div>

@@ -68,6 +68,7 @@ GEM
       thor (~> 0.14)
     globalid (0.3.7)
       activesupport (>= 4.1.0)
+    gravatar_image_tag (1.2.0)
     html-pipeline (2.5.0)
       activesupport (>= 2)
       nokogiri (>= 1.4)
@@ -207,6 +208,7 @@ DEPENDENCIES
   coffee-rails (~> 4.1.0)
   factory_girl_rails (~> 4.0)
   figaro (= 1.0)
+  gravatar_image_tag
   html-pipeline
   jbuilder (~> 2.0)
   jquery-rails

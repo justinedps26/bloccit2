@@ -72,11 +72,6 @@ body {
   padding: 5px;
 }
 
-.nav-right li:last-child:hover {
-  background-color: #143270;
-  border-radius: 1px;
-}
-
 #index-container {
   width: 100%;
   height: 600px;
@@ -189,8 +184,8 @@ footer {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  background-color: white;
-  margin:0;
+  background-color: #fafafa;
+  margin-top: 10px;
   font-family: Open Sans;
 }
 
@@ -206,7 +201,7 @@ footer {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  margin-top: 100px;
+  margin-top: 150px;
 }
 
 #tops {
@@ -347,6 +342,7 @@ footer {
 #show-post-container {
   background-color: white;
   padding: 50px;
+  margin-top: 100px;
 }
 
 #show-post-container h1 h4 {
@@ -520,14 +516,13 @@ footer {
 }
 
 .label-container {
-  background-color: #F44336;
-  color: white;
+  background-color: #ecf0f1;
+  color: #bdc3c7;
 }
 
 .label-container:hover {
-  background-color: #F44336;
-  color: white;
-  text-decoration: underline;
+  color: #2c3e50;
+  text-decoration: none;
 }
 
 .btn-new-topic {
@@ -733,13 +728,17 @@ footer {
 
 .gravatar {
   border-radius: 50%;
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
 }
 
-#show-profile-container {
-  background-color: white;
+#show-posts-profile-container {
+  background-color: #fafafa;
   font-family: Open Sans;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .alert-done {
@@ -844,7 +843,204 @@ footer {
   list-style-type: none;
   height: 50px;
   font-family: Open Sans;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
+
+.navbar-others li a {
+  text-decoration: none;
+}
+
+#left-title {
+  display: flex;
+  align-items: center;
+}
+
+#left-title img {
+  width: 40px;
+  height: 40px;
+}
+
+#cat-menu li a {
+  color: #7f8c8d;
+}
+
+#cat-menu li a:hover {
+  color:#2c3e50;
+}
+
+#cat-menu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  margin-top: 5px;
+}
+
+#cat-menu li {
+  padding: 20px;
+}
+
+#cat-menu li:last-child {
+  padding-right: 45px;
+}
+
+.nav-right-others img:first-child {
+  width: 20px;
+  height: 20px;
+}
+
+.nav-right-others img:nth-child(2) {
+  width: 20px;
+  height: 20px;
+}
+
+#user-show-post {
+  width: 600px;
+  height: 300px;
+  background-color: white;
+  padding: 20px;
+  border: 1px solid #bdc3c7;
+  border-radius: 3px;
+  position: relative;
+}
+
+#navbar-profile {
+  border-bottom: 1px solid #ecf0f1;
+  height: 270px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+#profile-position img {
+  border-radius: 50%;
+}
+
+#profile-position {
+  margin-left: 400px;
+}
+
+#profile-info {
+  padding-left: 50px;
+}
+
+#profile-info-user {
+  font-family: Open Sans;
+  font-size: 2.5em;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+#small-user-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 5x;
+}
+
+#followers {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-family: Open Sans;
+  width: 400px;
+}
+
+#followers p:last-child {
+  margin-left: 10px;
+}
+
+#followers img {
+  width: 15px;
+  height: 15px;
+}
+
+#social {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#social img {
+  width: 30px;
+  height: 30px;
+  margin-top: 5px;
+  border-radius: 0px;
+  padding: 5px;
+}
+
+#post-body a:first-child {
+  font-family: Open Sans;
+  font-size: 2em;
+  color: #00BCD4;
+}
+
+#post-body p {
+  font-family: Playfair Display;
+  font-size: 1.3em;
+  margin-top: 20px;
+}
+
+#post-body a:last-child {
+  font-family: Playfair Display;
+  color: #bdc3c7;
+  font-size: 1em;
+  text-decoration: underline;
+  margin-left: 5px;
+}
+
+#user-writer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+#user {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#user img {
+  border-radius: 50%;
+}
+
+#submitted p {
+  font-size: 1.2em;
+  color: #00BCD4;
+  line-height: 10px;
+}
+
+#submitted p:last-child {
+  font-size: 0.7em;
+  font-style: italic;
+  color: #bdc3c7;
+}
+
+#likenshare-user {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+  bottom: 0;
+  position: absolute;
+  padding-bottom: 10px;
+}
+
+#likenshare-user img {
+  width: 20px;
+  height: 20px;
+}
+
+#user-show-labels {
+  margin-left: 20px;
+}
+
+
 
 
 @import "bootstrap-sprockets";

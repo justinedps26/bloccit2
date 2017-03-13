@@ -13,6 +13,9 @@ gem 'redcarpet', '~> 3.0.0'
 gem 'md_emoji'
 gem 'html-pipeline'
 
+# image_tag Gravatar
+gem 'gravatar_image_tag'
+
 # Bootstrap for styling
 gem 'bootstrap-sass'
 # Use Uglifier as compressor for JavaScript assets

@@ -6,11 +6,6 @@
     <h1>Catégories</h1>
   </div>
   <div id="topics-container">
-    <% if user_is_authorized_for_topics? %>
-      <div class="col-md-4 col-topic">
-        <%= link_to "New Topic", new_topic_path, class: 'btn btn-new-topic' %>
-      </div>
-    <% end %>
     <div class="row">
      <div class="row" style="margin-top:50px;">
        <% @topics.each do |topic| %>

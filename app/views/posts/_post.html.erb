@@ -1,13 +1,41 @@
 <div class="media" id="show-profile-container">
- <%= render partial: 'votes/voter', locals: { post: post } %>
- <div class="media-body">
-   <h4 class="media-heading">
-     <%= link_to post.title, topic_post_path(post.topic, post) %>
-     <%= render partial: "labels/list", locals: { labels: post.labels } %>
-   </h4>
-   <small>
-     submitted <%= time_ago_in_words(post.created_at) %> ago by <%= post.user.name %> <br>
-     <%= post.comments.count %> Comments
-   </small>
+ <div class="media-body" id="user-show-post">
+   <div class="media-heading" id="show-post-body">
+
+     <div id="user-writer">
+       <div id="user">
+         <% avatar_url = @user.avatar_url(40) %>
+         <% if avatar_url %>
+           <div class="media-left">
+             <%= image_tag avatar_url, class: 'media-object' %>
+           </div>
+         <% end %>
+       </div>
+       <div id="submitted">
+         <p><%= @user.name %></p>
+         <p><%= time_ago_in_words(post.created_at) %> ago</p>
+       </div>
+     </div>
+
+     <div id="post-body">
+       <%= link_to post.title, topic_post_path(post.topic, post) %>
+       <p><%= truncate(post.body, length: 230, omission: '...') { link_to 'Read More', topic_post_path(post.topic, post) } %></p>
+     </div>
+
+     <div id="likenshare-user">
+       <%= render partial: 'votes/voter', locals: { post: post } %>
+       <div id="comments-icon-container">
+         <div id="icon">
+           <%= image_tag('bubble.png') %>
+         </div>
+         <div class='js-comments-count' id="js-comments-count">
+           <span style="font-weight:bold;font-size:1.1em;"><%= post.comments.count %></span>
+         </div>
+         <div id="user-show-labels">
+           <%= render partial: "labels/list", locals: { labels: post.labels } %>
+         </div>
+       </div>
+     </div>
+   </div>
  </div>
 </div>

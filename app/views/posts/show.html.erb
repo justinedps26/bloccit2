@@ -38,7 +38,7 @@
         <p><%= markdown(@post.body) %></p>
       </div>
       <div id="separate"></div>
-      <div id="likenshare">
+      <div id="likenshare" class="likenshare-position">
         <%= render partial: 'votes/voter', locals: { post: @post } %>
         <div id="comments-icon-container">
           <div id="icon">
@@ -48,7 +48,6 @@
             <span style="font-weight:bold;font-size:1.1em;"><%= @post.comments.count %></span>
           </div>
         </div>
-
       </div>
       <div class="new-comment">
         <% if current_user %>

@@ -1,28 +1,7 @@
-<%= render partial: 'layouts/navbar' %>
+<%= render partial: 'layouts/navbarprofile' %>
 
-<div id="show-profile-container">
-  <div class="row">
-   <div class="col-md-8">
-     <div class="media">
-       <br />
-       <% avatar_url = @user.avatar_url(128) %>
-       <% if avatar_url %>
-         <div class="media-left">
-           <%= image_tag avatar_url, class: 'media-object' %>
-         </div>
-       <% end %>
-       <div class="media-body">
-         <h2 class="media-heading"><%= @user.name %></h2>
-         <small>
-           <%= pluralize(@user.posts.count, 'post') %>,
-           <div class='js-comments-count'><%= pluralize(@user.comments.count, 'comment') %></div>
-         </small>
-       </div>
-     </div>
-   </div>
-  </div>
-
-  <h2>Posts</h2>
+<div id="show-posts-profile-container">
+  <h4><%= @user.name %>'s posts</h4>
   <% if @user.posts.count == 0 %>
     <p>Nothing to show</p>
   <% else %>
