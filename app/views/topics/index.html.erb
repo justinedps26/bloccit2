@@ -1,23 +1,5 @@
 <%= render partial: 'layouts/navbar' %>
 
 <body id="index-topics-container">
-  <div id="h1-topic">
-    <%= image_tag('chat.png') %>
-    <h1>Catégories</h1>
-  </div>
-  <div id="topics-container">
-    <div class="row">
-     <div class="row" style="margin-top:50px;">
-       <% @topics.each do |topic| %>
-         <div id="topic-container" class="media">
-           <div class="media-body">
-             <h4 class="media-heading">
-               <%= link_to topic.name, topic %>
-             </h4>
-           </div>
-         </div>
-       <% end %>
-     </div>
-    </div>
-  </div>
+  
 </body>

@@ -5,9 +5,11 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
+    @topics = Topic.visible_to(current_user)
   end
 
   def new
+    @topics = Topic.visible_to(current_user)
     @topic = Topic.find(params[:topic_id])
     @post = Post.new
   end
@@ -28,6 +30,7 @@ class PostsController < ApplicationController
   end
 
   def edit
+    @topics = Topic.visible_to(current_user)
     @post = Post.find(params[:id])
   end
 

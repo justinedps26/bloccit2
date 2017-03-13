@@ -18,10 +18,12 @@ class TopicsController < ApplicationController
   end
 
   def new
+    @topics = Topic.visible_to(current_user)
     @topic = Topic.new
   end
 
   def create
+    @topics = Topic.visible_to(current_user)
     @topic = Topic.new(topic_params)
 
     if @topic.save
@@ -35,6 +37,7 @@ class TopicsController < ApplicationController
   end
 
   def edit
+    @topics = Topic.visible_to(current_user)
     @topic = Topic.find(params[:id])
   end
 
