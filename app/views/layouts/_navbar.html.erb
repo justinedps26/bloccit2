@@ -1,35 +1,34 @@
-<div id="nav" class="navbar-fixed-top" style="background-color:#00BCD4">
+<div class="navbar-fixed-top navbar-others" style="background-color:white">
   <ul>
-    <div id="nav-left">
+    <div id="nav-left" class="nav-left-others">
       <div id="left-title">
         <% if current_user %>
-          <li class="logo-font"><%= link_to 'SayIt', topics_path, style: 'color:white;text-transform: uppercase;font-size:2.4em;margin-right:30px;' %></li>
+          <li class="logo-font"><%= link_to 'SayIt', topics_path, style: 'color:#00BCD4;text-transform: uppercase;font-size:2.4em;margin-right:30px;' %></li>
         <% else %>
-          <li class="logo-font"><%= link_to 'SayIt', root_path, style: 'color:white;text-transform: uppercase;font-size:2.4em;margin-right:30px;' %></li>
+          <li class="logo-font"><%= link_to 'SayIt', root_path, style: 'color:#00BCD4;text-transform: uppercase;font-size:2.4em;margin-right:30px;' %></li>
         <% end %>
       </div>
       <div id="left-menu">
-        <li><%= link_to 'Topics', topics_path, style: 'color:white' %></li>
-        <li><%= link_to 'Categories', topics_path, style: 'color:white' %></li>
+        <li><%= link_to 'Categories', topics_path, style: 'color:#00BCD4' %></li>
       </div>
     </div>
-    <div class="nav-right">
+    <div class="nav-right nav-right-others">
         <% if current_user %>
           <li>
             <%= image_tag current_user.avatar_url(48), class: 'gravatar' %>
           </li>
           <li>
-            <%= link_to current_user.name, user_path(current_user) %>
+            <%= link_to current_user.name, user_path(current_user), style: 'color:#00BCD4' %>
           </li>
           <% if user_is_authorized_for_topics? %>
-            <li style="color:white;font-weight:bold"> | </li>
+            <li style="color:#00BCD4;font-weight:bold"> | </li>
             <li id="add-topic">
               <%= image_tag('plus.png') %>
-              <%= link_to 'New Topic', new_topic_path %>
+              <%= link_to 'New Topic', new_topic_path, style: 'color:#00BCD4' %>
             </li>
           <% end %>
-          <li style="color:white;font-weight:bold"> | </li>
-          <li><%= link_to 'Sign Out', session_path(current_user), method: :delete %></li>
+          <li style="color:#00BCD4;font-weight:bold"> | </li>
+          <li><%= link_to 'Sign Out', session_path(current_user), method: :delete, style: 'color:#00BCD4' %></li>
         <% else %>
           <li id="signin"><%= link_to 'Sign In', new_session_path %></li>
           <li><%= link_to 'Sign Up', new_user_path %></li>

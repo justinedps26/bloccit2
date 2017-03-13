@@ -1,7 +1,45 @@
 <%= render partial: 'layouts/navbar' %>
 
+<div id="new-post-container">
+  <div id="new-post-title">
+    <div id="title">
+      <h1>EDIT POST — <span style="font-style:italic">Draft</span></h1>
+    </div>
+    <div id="publish-save">
+      <button>Save for later</button>
+    </div>
+  </div>
+  <div class="row" id="new-post-md-container">
+    <div class="col-md-8">
+      <%= render partial: 'form', locals: { topic: @post.topic, post: @post } %>
+    </div>
 
-  <div class="col-md-8">
-    <%= render partial: 'form', locals: { topic: @post.topic, post: @post } %>
+    <div id="md-cheatsheet">
+      <div id="md-desc">
+        <p>We handle Markdown!</p>
+      </div>
+      <div id="md-sheet">
+        <div id="cheat">
+          <div style="font-weight:bold">**bold**</div>
+          <div style="font-style:italic">_italic_</div>
+          <div>**bold**</div>
+        </div>
+        <div id="cheat">
+          <div>`code`</div>
+          <div>> quote</div>
+          <div>- bullet list</div>
+        </div>
+        <div id="cheat">
+          <div># title</div>
+          <div>## subtitle</div>
+          <div>### sub-subtitle</div>
+        </div>
+        <div id="cheat">
+          <div>Enter x3: line breaks</div>
+        </div>
+        <div id="cheat">
+          <div style="background-color:#FF9800"><%= link_to 'Click here for more', 'https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet', target: '_blank' %></div>
+        </div>
+      </div>
   </div>
 </div>
