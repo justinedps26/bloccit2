@@ -34,13 +34,10 @@
   </ul>
 
   <div id="cat-menu">
+    <% @topics.each do |topic| %>
     <ul class="topics">
-      <li><%= link_to 'UX/UI Design', topics_path %></li>
-      <li><%= link_to 'Software Engineering', topics_path %></li>
-      <li><%= link_to 'Coding Challenges', topics_path %></li>
-      <li><%= link_to 'Development tools', topics_path %></li>
-      <li><%= link_to 'RUBY Room', topics_path %></li>
-      <li><%= link_to 'Artificial Intelligence & Machine Learning', topics_path %></li>
+      <li><%= link_to topic.name, topic %></li>
     </ul>
+    <% end %>
   </div>
 </div>

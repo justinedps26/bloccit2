@@ -25,7 +25,7 @@ member = User.create!(
 )
 
 # Create topics
-15.times do
+6.times do
   Topic.create!(
     name: RandomData.random_sentence,
     description: RandomData.random_paragraph
