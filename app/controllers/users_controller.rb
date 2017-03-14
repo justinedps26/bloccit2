@@ -13,7 +13,6 @@ class UsersController < ApplicationController
     @user.password_confirmation = params[:user][:password_confirmation]
 
     if @user.save
-      flash[:notice] = "Welcome to SayIt #{@user.name} !"
       create_session(@user)
       redirect_to topics_path
     else
