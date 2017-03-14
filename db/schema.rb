@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170313095953) do
+ActiveRecord::Schema.define(version: 20170313202743) do
 
   create_table "answers", force: :cascade do |t|
     t.text     "body"
@@ -97,6 +97,7 @@ ActiveRecord::Schema.define(version: 20170313095953) do
     t.datetime "updated_at",      null: false
     t.integer  "role"
     t.string   "auth_token"
+    t.string   "avatar"
   end
 
   create_table "votes", force: :cascade do |t|

@@ -16,6 +16,9 @@
            </ul>
          </div>
        <% end %>
+       <%= form_group_tag(@user.errors[:avatar]) do %>
+         <%= f.file_field :avatar %>
+       <% end %>
        <%= form_group_tag(@user.errors[:name]) do %>
          <%= f.text_field :name, autofocus: true, class: 'form-control', placeholder: "Enter name" %>
        <% end %>

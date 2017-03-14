@@ -23,10 +23,10 @@
              <div id="user-writer-topics">
                <div id="user-writer1">
                  <div id="user">
-                   <% avatar_url = post.user.avatar_url(40) %>
-                   <% if avatar_url %>
+                   <% avatar = post.user.avatar %>
+                   <% if avatar %>
                      <div class="media-left">
-                       <%= image_tag avatar_url, class: 'media-object' %>
+                       <%= image_tag avatar, class: 'media-object' %>
                      </div>
                    <% end %>
                  </div>

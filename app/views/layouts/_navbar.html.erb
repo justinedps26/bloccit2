@@ -21,7 +21,7 @@
           <li><%= link_to image_tag('search.png'), session_path(current_user), method: :delete %></li>
           <li><%= link_to image_tag('bell.png'), session_path(current_user), method: :delete %></li>
           <li>
-            <%= image_tag current_user.avatar_url(48), class: 'gravatar', style: 'width:40px;height:40px' %>
+            <%= image_tag current_user.avatar, class: 'gravatar', style: 'width:40px;height:40px' %>
           </li>
           <li>
             <%= link_to current_user.name, user_path(current_user), style: 'color:#00BCD4' %>

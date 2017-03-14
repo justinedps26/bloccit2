@@ -16,6 +16,9 @@ gem 'html-pipeline'
 # image_tag Gravatar
 gem 'gravatar_image_tag'
 
+# Profile picture uploading
+gem 'carrierwave', '~> 1.0'
+
 # Bootstrap for styling
 gem 'bootstrap-sass'
 # Use Uglifier as compressor for JavaScript assets

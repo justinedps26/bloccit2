@@ -2,5 +2,6 @@
   <%= f.text_field :labels,
                   class: 'form-control',
                   placeholder: "Tags... (separated by commas)",
-                  value: labels.map(&:name).join(', ') %>
+                  value: labels.map(&:name).join(', '),
+                  style: 'font-size:1em' %>
 </div>

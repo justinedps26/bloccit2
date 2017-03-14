@@ -146,7 +146,6 @@ footer {
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  bottom: 0;
 }
 
 #footer-container {
@@ -155,6 +154,7 @@ footer {
   align-items: center;
   justify-content: space-between;
   font-family: Open Sans;
+  bottom: 0;
 }
 
 .subcat {
@@ -479,6 +479,12 @@ footer {
   justify-content: flex-start;
 }
 
+#cont-1 img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
 #cont-2 img {
   width: 15px;
   height: 15px;
@@ -568,7 +574,6 @@ footer {
 
 #form-style input[type=text]:last-child {
   box-shadow: none;
-  font-size: 1em;
   font-family: Playfair Display;
   padding: 30px;
   border-bottom: 1px solid #ecf0f1;
@@ -759,6 +764,8 @@ footer {
 
 #post-user-show img {
   border-radius: 50%;
+  width: 48px;
+  height: 48px;
 }
 
 #post-user-order {
@@ -820,6 +827,10 @@ footer {
 
 #js-comments-count {
   margin-right: 10px;
+}
+
+.navbar-others {
+  position: relative;
 }
 
 .navbar-others ul {
@@ -900,6 +911,11 @@ footer {
   flex-direction: row;
   align-items: center;
   justify-content: center;
+}
+
+#profile-pic img {
+  width: 128px;
+  height: 128px;
 }
 
 #profile-position img {
@@ -993,6 +1009,8 @@ footer {
 
 #user img {
   border-radius: 50%;
+  width: 48px;
+  height: 48px;
 }
 
 #submitted p {
