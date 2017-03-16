@@ -21,10 +21,8 @@ class PostsController < ApplicationController
 
     if @post.save
       @post.labels = Label.update_labels(params[:post][:labels])
-      flash[:notice] = "Your post was saved successfully!"
       redirect_to [@topic, @post]
     else
-      flash.now[:alert] = "There was an error saving your post. Please try again later."
       render :new
     end
   end
@@ -52,7 +50,6 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
 
     if @post.destroy
-      flash[:notice] = "\"#{@post.title}\" was successfully deleted."
       redirect_to @post.topic
     else
       flash.now[:alert] = "There was an error deleting your post. Please try again later."

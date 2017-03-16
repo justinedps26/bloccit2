@@ -3,6 +3,8 @@ class Topic < ActiveRecord::Base
   has_many :labelings, as: :labelable
   has_many :labels, through: :labelings
 
+  default_scope { order('updated_at DESC') }
+
 
   # Scope is a method that generates methods
   # Its first argument is the name of the method to generate

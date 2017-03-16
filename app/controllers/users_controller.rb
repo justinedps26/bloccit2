@@ -5,12 +5,7 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.new
-    @user.avatar = params[:user][:avatar]
-    @user.name = params[:user][:name]
-    @user.email = params[:user][:email]
-    @user.password = params[:user][:password]
-    @user.password_confirmation = params[:user][:password_confirmation]
+    @user = User.new(user_params)
 
     if @user.save
       create_session(@user)
@@ -25,4 +20,11 @@ class UsersController < ApplicationController
      @user = User.find(params[:id])
      @posts = @user.posts.visible_to(current_user)
    end
+
+   private
+
+   def user_params
+     params.require(:user).permit(:avatar, :name, :email, :password, :password_confirmation)
+   end
+
 end

@@ -18,14 +18,12 @@
               <%= link_to 'New Topic', new_topic_path, style: 'color:#00BCD4' %>
             </li>
           <% end %>
-          <li><%= link_to image_tag('search.png'), session_path(current_user), method: :delete %></li>
-          <li><%= link_to image_tag('bell.png'), session_path(current_user), method: :delete %></li>
+          <li><%= image_tag('search.png') %></li>
+          <li><%= image_tag('bell.png') %></li>
           <li>
             <%= image_tag current_user.avatar, class: 'gravatar', style: 'width:40px;height:40px' %>
           </li>
-          <li>
-            <%= link_to current_user.name, user_path(current_user), style: 'color:#00BCD4' %>
-          </li>
+          <li><%= link_to 'Sign Out', session_path(current_user), method: :delete, style: 'color:#00BCD4' %>
         <% else %>
           <li id="signin"><%= link_to 'Sign In', new_session_path %></li>
           <li><%= link_to 'Sign Up', new_user_path %></li>
