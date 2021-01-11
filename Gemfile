@@ -9,7 +9,7 @@ gem 'rails', '4.2.6'
 gem 'sass-rails', '~> 5.0'
 
 # Handling Markdown
-gem 'redcarpet', '~> 3.0.0'
+gem 'redcarpet', '~> 3.5.1'
 gem 'md_emoji'
 gem 'html-pipeline'
 
