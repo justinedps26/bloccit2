@@ -17,7 +17,7 @@ gem 'html-pipeline'
 gem 'gravatar_image_tag'
 
 # Profile picture uploading
-gem 'carrierwave', '~> 1.0'
+gem 'carrierwave', '~> 1.3'
 
 # Bootstrap for styling
 gem 'bootstrap-sass'
